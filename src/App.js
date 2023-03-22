@@ -46,7 +46,12 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
       {winner && (
-        <button onClick={() => window.location.reload(false)}>New Game</button>
+        <button
+          className="new-game"
+          onClick={() => window.location.reload(false)}
+        >
+          New Game
+        </button>
       )}
     </div>
   );
