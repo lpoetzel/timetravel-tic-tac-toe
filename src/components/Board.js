@@ -34,6 +34,14 @@ export default function Board({ xIsNext, squares, onPlay }) {
           })}
         </div>
       ))}
+      {winner && (
+        <button
+          className="new-game"
+          onClick={() => window.location.reload(false)}
+        >
+          New Game
+        </button>
+      )}
     </div>
   );
 }
