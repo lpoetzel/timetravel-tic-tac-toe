@@ -15,5 +15,8 @@ export default function calculateWinner(squares) {
       return squares[a];
     }
   }
+  if (!squares.includes(null)) {
+    return "None, its a tie";
+  }
   return null;
 }
