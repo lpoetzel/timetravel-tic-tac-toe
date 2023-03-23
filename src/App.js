@@ -15,16 +15,16 @@ export default function Game() {
   function jumpTo(nextMove) {
     setCurrentMove(nextMove);
   }
-  const moves = history.map((move) => {
+  const moves = history.map((move, index) => {
     let description;
-    if (move > 0) {
-      description = "Go to move #" + move;
+    if (index > 0) {
+      description = "Go to move #" + index;
     } else {
       description = "Go to game start";
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li key={index}>
+        <button onClick={() => jumpTo(index)}>{description}</button>
       </li>
     );
   });
